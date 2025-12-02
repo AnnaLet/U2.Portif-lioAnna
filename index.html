@@ -1,0 +1,125 @@
+<!doctype html> <!-- Define que o documento é HTML5 -->
+<html lang="pt-BR"> <!-- Inicia o HTML e define o idioma da página como português do Brasil -->
+<head> <!-- Cabeçalho do documento, com configurações e imports -->
+  <meta charset="utf-8" /> <!-- Define o padrão de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Deixa o site responsivo em dispositivos móveis -->
+  <title>Portfólio — Anna Letícia</title> <!-- Título da aba do navegador -->
+  <meta name="description" content="Portfólio profissional de Prof. Antonio Lima — projetos, habilidades e contato." /> <!-- Descrição para SEO -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Importa o arquivo CSS externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"> <!-- Importa a fonte Inter do Google -->
+</head>
+
+<body> <!-- Corpo do site, onde fica todo o conteúdo visível -->
+  <div class="wrap"> <!-- Container central que limita a largura máxima do site -->
+
+    <header> <!-- Cabeçalho do site -->
+      <a class="brand" href="#"> <!-- Área clicável com logo + nome -->
+      <div class="logo"> <img src="images/OIP.webp" alt="imagem de gatinho" class ="tamanhoimg"></div>
+        <!-- Logo minimalista com iniciais -->
+        <div> <!-- Agrupa nome e subtítulo -->
+          <div style="font-weight:800" class="colorspeaker">Anna Letícia</div> <!-- Nome grande -->
+          <div style="font-size:12px;color:var(--muted);margin-top:2px"> Desenvolvedora Full-Stack </div> <!-- Subtítulo menor -->
+        </div>
+      </a>
+
+      <nav> <!-- Menu de navegação -->
+        <a href="#about" class="colorspeaker">Sobre</a> <!-- Link para seção Sobre -->
+        <a href="#projects" class="colorspeaker">Projetos</a> <!-- Link para seção Projetos -->
+        <a href="#skills" class="colorspeaker">Habilidades</a> <!-- Link para seção Habilidades -->
+        <a href="#contact" class="cta">Contato</a> <!-- Link com destaque -->
+      </nav>
+    </header>
+    <main> <!-- Conteúdo principal do site -->
+
+      <section class="hero"> <!-- Seção principal (hero) com apresentação -->
+        <div class="intro"> <!-- Texto de apresentação -->
+          <h1 class="fade-up" >Olá — eu sou Anna Letícia.</h1> <!-- Título animado -->
+          <p class="fade-up delay">Profissional de T.I em desenvolvimento — focada em lógica, programação Full-Stack e construção de soluções reais.</p> <!-- Subtítulo -->
+          <div class="actions fade-up delay"> <!-- Botões de ação -->
+            <a class="btn" href="#projects">Ver projetos</a> <!-- Botão de ver projetos -->
+            <a class="btn secondary" href="#contact">Me contratar</a> <!-- Botão de contato -->
+          </div>
+        </div>
+
+        <aside class="profile-card fade-up"> <!-- Cartão lateral com perfil -->
+          <div style="display:flex;align-items:center;gap:12px"> <!-- Linha com avatar + textos -->
+            <div class="avatar">AL</div> <!-- Avatar simples com iniciais -->
+            <div> <!-- Informações do avatar -->
+              <h3>Anna Letícia</h3> <!-- Nome -->
+              <p class="colormuted">Desenvolvedora Full-Stack em formação — apaixonada por tecnologia, lógica e criação de soluções digitais.</p> <!-- Descrição -->
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about"> <!-- Seção Sobre -->
+        <div class="section-title"><h2>Sobre</h2><p>Quem sou e como trabalho</p></div> <!-- Título da seção -->
+        <div class="card"> <!-- Cartão com texto sobre você -->
+          <p class ="alinhamento">Sou uma profissional em desenvolvimento na área de Tecnologia da Informação, motivada pelo desejo de aprender continuamente e transformar ideias em soluções reais. Desde o início da minha formação, descobri que trabalhar com tecnologia é muito mais do que dominar ferramentas: é compreender problemas, pensar de forma criativa e construir caminhos que facilitem a vida das pessoas.
+
+            Atualmente, curso Informática para Internet e já concluí qualificações importantes, como Programação de Sistemas pelo SENAC e extensões em Desenvolvimento de Jogos Eletrônicos, Programação de Dispositivos Móveis e Arduino pela UFRN. Essas experiências ampliaram minha visão sobre o universo da tecnologia e reforçaram minha paixão por criação, lógica e inovação.
+            
+            Tenho conhecimento em HTML, CSS, JavaScript e Excel — desde o uso intermediário até a criação de relatórios profissionais. Também possuo familiaridade com metodologias ágeis, como Scrum e Kanban, e com ferramentas de Design Thinking, que me ajudam a planejar soluções de forma colaborativa e centrada no usuário.
+            
+            No meu dia a dia, prezo pela organização, boa comunicação e proatividade. Acredito que determinação e persistência são essenciais para crescer na área e superar desafios técnicos. Busco sempre aprender fazendo, experimentando, testando ideias e colocando em prática tudo o que estudo.
+            
+            Meu objetivo é conquistar meu primeiro emprego na área de T.I e contribuir com equipes que valorizem inovação, colaboração e evolução constante. Quero construir minha carreira desenvolvendo projetos reais, ampliando meus conhecimentos e mostrando que, com dedicação e vontade de aprender, é possível transformar curiosidade em resultados concretos.</p> <!-- Texto completo da seção -->
+        </div>
+      </section>
+
+      <section id="projects"> <!-- Seção Projetos -->
+        <div class="section-title"><h2>Projetos</h2><p>Alguns trabalhos selecionados</p></div> <!-- Cabeçalho da seção -->
+        <div class="projects"> <!-- Grid dos projetos -->
+
+          <article class="card"> <!-- Cartão 1 -->
+            <h3 class="colorspeaker">Gerenciador de Tarefas</h3> <!-- Nome do projeto -->
+            <p>Aplicação em React para gerenciar tarefas — feita com alunos.</p> <!-- Descrição -->
+          </article>
+
+          <article class="card"> <!-- Cartão 2 -->
+            <h3 class="colorspeaker">Prontuário Eletrônico</h3>
+            <p>Protótipo em Figma e HTML para lar de idosos.</p>
+          </article>
+
+          <article class="card"> <!-- Cartão 3 -->
+            <h3 class="colorspeaker">Portfólio</h3>
+            <p>Modelo de portfólio HTML/CSS responsivo para professores.</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills"> <!-- Seção de habilidades -->
+        <div class="section-title"><h2>Habilidades</h2><p>Tecnologias e ferramentas</p></div> <!-- Título -->
+        <div class="card"> <!-- Cartão -->
+          <div class="skills"> <!-- Grid de habilidades -->
+            <div class="skill">HTML5</div> <!-- Item -->
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Figma</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact"> <!-- Seção Contato -->
+        <div class="section-title"><h2>Contato</h2><p>Me mande uma mensagem</p></div> <!-- Título -->
+        <div class="card"> <!-- Cartão do formulário -->
+          <form onsubmit="event.preventDefault();alert('Formulário de exemplo');"> <!-- Impede envio real e exibe alerta -->
+            <input type="text" placeholder="Seu nome" required> <!-- Campo nome -->
+            <input type="email" placeholder="Seu e-mail" required> <!-- Campo email -->
+            <textarea placeholder="Sua mensagem" required></textarea> <!-- Campo mensagem -->
+            <button class="submit">Enviar</button> <!-- Botão de envio -->
+          </form>
+        </div>
+      </section>
+
+      <footer>© <span id="ano"></span> Prof. Antonio Lima — Todos os direitos reservados</footer> <!-- Rodapé com ano dinâmico -->
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear(); // Pega o ano atual e coloca no rodapé
+  </script> <!-- Fim do script -->
+</body>
+</html> <!-- Fecha o documento HTML -->

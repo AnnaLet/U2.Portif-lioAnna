@@ -1,0 +1,414 @@
+/* --------------------------------------------------
+   Define o cabeçalho do arquivo CSS e explica que ele
+   será usado no portfólio. Também indica que é responsivo.
+-------------------------------------------------- */
+
+/* :root define variáveis globais (cores, tamanhos, etc.) */
+:root {
+  --bg: #0f1724; /* Cor de fundo principal */
+  --card: #0b1220; /* Cor dos cartões */
+  --muted: rgba(184, 104, 46, 1); /* Cinza suave para textos secundários */
+  --speaker: rgba(222, 150, 57, 1); 
+  --accent: #4f46e5; /* Roxo — cor de destaque */
+  --accent-2: #06b6d4; /* Ciano — segundo destaque */
+  --glass: rgba(255, 255, 255, 0.03); /* Efeito glass muito leve */
+  --radius: 14px; /* Arredondamento padrão */
+  --max-width: 1100px; /* Largura máxima do layout */
+  --gap: 20px; /* Espaçamento padrão */
+  color-scheme: dark; /* Diz ao navegador que o site usa tema escuro */
+  font-family: 'Inter', system-ui,; /* Fonte padrão */
+}
+
+/* Remove inconsistências de tamanho da caixa */
+* {
+  box-sizing: border-box; /* Inclui bordas e padding dentro do tamanho total */
+}
+
+/* Garante que html e body ocupem toda a altura */
+html,
+body {
+  height: 100%;
+}
+
+/* Estilos gerais do corpo */
+body {
+  margin: 0; /* Remove margens do navegador */
+  background: linear-gradient(180deg, #071024 0%, var(--bg) 100%); /* Fundo com gradiente */
+  color: #e6eef8; /* Cor padrão do texto */
+  -webkit-font-smoothing: antialiased; /* Suavização de fonte no Chrome */
+  -moz-osx-font-smoothing: grayscale; /* Suavização no Firefox */
+  line-height: 1.5; /* Altura de linha */
+  padding: 40px 20px; /* Espaçamento interno */
+  display: flex; /* Para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  font-size: 16px; /* Tamanho base da fonte */
+}
+
+/* Contêiner principal */
+.wrap {
+  width: 100%; /* Ocupa toda a largura */
+  max-width: var(--max-width); /* Mas limita ao máximo definido */
+}
+
+/* ===== HEADER ===== */
+
+/* Cabeçalho principal */
+header {
+  display: flex; /* Coloca itens lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Um item em cada lado */
+  gap: var(--gap); /* Espaço entre elementos */
+  margin-bottom: 34px; /* Espaço abaixo */
+}
+
+/* Marca e nome do portfólio */
+.brand {
+  display: flex; /* Itens lado a lado */
+  align-items: center; /* Centralizados */
+  gap: 14px; /* Espaço entre logo e nome */
+  text-decoration: none; /* Remove sublinhado */
+  color: inherit; /* Usa a cor atual do texto */
+}
+
+/* Quadrado da logo AL */
+.logo {
+  width: 56px; /* Largura */
+  height: 56px; /* Altura */
+  border-radius: 12px; /* Bordas arredondadas */
+  display:flex; /* Para centralizar o texto */
+  align-items:center;
+  justify-content:center;
+  font-weight: 700; /* Texto grosso */
+  font-size: 18px; /* Tamanho da fonte */
+  color: var(--speaker);
+
+
+ 
+ 
+  }
+
+
+/* Navegação do menu */
+nav {
+  display: flex; /* Links lado a lado */
+  gap: 18px; /* Espaço entre links */
+  align-items: center;
+}
+
+/* Estilo dos links */
+nav a {
+  color: var(--muted); /* Cinza */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600; /* Texto médio */
+  font-size: 14px; /* Tamanho */
+  padding: 8px 12px; /* Área clicável */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Quando passa o mouse */
+nav a:hover {
+  color: var(--accent); /* Fica roxo */
+}
+
+/* Botão de chamada para ação */
+.cta {
+  background: linear-gradient(90deg, var(--accent), #8b5cf6); /* Degradê roxo */
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--speaker);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12); /* Sombra */
+}
+
+/* ===== HERO ===== */
+
+/* Área principal da introdução */
+.hero {
+  display: grid; /* Usa grid layout */
+  grid-template-columns: 1fr 420px; /* Texto / Card lateral */
+  gap: 32px; /* Espaço entre colunas */
+  align-items: center; /* Centraliza verticalmente */
+  margin-bottom: 32px;
+}
+
+/* Título principal */
+.intro h1 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  line-height: 1.02;
+}
+
+/* Parágrafo da intro */
+.intro p {
+  color: var(--muted);
+  
+  margin: 0 0 18px 0;
+  font-size: 16px;
+}
+
+/* Botões da intro */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Botões padrões */
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--speaker);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Botão secundário */
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ===== PROFILE CARD ===== */
+
+/* Card lateral com mini perfil */
+.profile-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 20px;
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px); /* Efeito fosco */
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Avatar (sua foto) */
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--speaker);
+}
+
+/* ===== SEÇÕES ===== */
+section {
+  margin-bottom: 28px;
+}
+
+/* Título de cada seção */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--speaker);
+}
+
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== PROJETOS ===== */
+
+/* Grid dos projetos */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 18px;
+}
+
+/* Card do projeto */
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid rgba(243, 238, 238, 0.03);
+  transition: transform 0.28s ease, box-shadow 0.28s ease; /* Animação suave */
+  overflow: hidden;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+  transform: translateY(-8px); /* Sobe */
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.6); /* Sombra grande */
+}
+
+/* Título do card */
+.card h3 {
+  margin: 0 0 8px 0;
+}
+
+/* Texto do card */
+.card p {
+  margin: 0;
+  color: var(--muted);
+  
+  font-size: 16px; /* obs:colocar os tamanhos para 16px */
+}
+
+/* ===== HABILIDADES ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap; /* Quebra linha */
+  gap: 10px;
+}
+
+/* Cada habilidade */
+.skill {
+  background: var(--glass);
+  padding: 8px 12px;
+  border-radius: 999px; /* Pílula */
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== FORMULÁRIO ===== */
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  gap: 12px;
+}
+
+/* Inputs e textarea */
+input,
+textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: 10px;
+  color: inherit;
+  font-size: 14px;
+}
+
+/* Texto maior */
+textarea {
+  grid-column: 1/-1; /* Ocupa as 2 colunas */
+  min-height: 120px;
+}
+
+/* Botão enviar */
+.submit {
+  grid-column: 1/-1;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  color: var(--speaker);
+  font-weight: 700;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 18px 0;
+  text-align: center;
+}
+
+/* ===== RESPONSIVO ===== */
+
+/* Tablets */
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr 360px; /* Diminui card */
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  }
+}
+
+/* Celular */
+@media (max-width: 720px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column; /* Menu para baixo */
+    align-items: flex-start;
+  }
+
+  nav {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero {
+    grid-template-columns: 1fr; /* Tudo em uma coluna */
+  }
+
+  .profile-card {
+    order: 2; /* Card vai para baixo */
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* 1 coluna */
+  }
+
+  form {
+    grid-template-columns: 1fr; /* 1 coluna */
+  }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+/* Classe que faz surgir de baixo */
+.fade-up {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s forwards;
+  color: var(--speaker);
+}
+
+/* Delay para segundo elemento */
+.fade-up.delay {
+  animation-delay: 0.15s;
+}
+
+/* Keyframes da animação */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.colorspeaker{
+color: var(--speaker);
+}
+.colormuted{
+  color: var(--muted);
+}
+.alinhamento{
+  text-align: justify;
+}
+
+.tamanhoimg{
+  width: 100px;
+  height: 100px;
+
+
+}
